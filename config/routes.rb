@@ -1,11 +1,6 @@
-# Plugin's routes
-# See: http://guides.rubyonrails.org/routing.html
-
-  get 'copyproject', :to => 'copyproject#index'
-  post 'copyproject', :to => 'copyproject#index'  
-
-  resources :copyproject do
+ resources :copyproject do
     member do
-      match 'copy', :via => :post
+      get 'index'
+      match 'copy', :via => [:get, :post]
     end
-  end
+end

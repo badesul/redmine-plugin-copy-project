@@ -1,9 +1,8 @@
 <div class="contextual">
+  <% if User.current.allowed_to?(:copy_project, @project) %>
+   <%= link_to(l(:button_copy), {:action=>:index, :controller=>:copyproject, :project_id=>@project.id}, :class => 'icon icon-copy') %>
 
-<% if User.current.allowed_to?(:copy_project, @project) %>
-    <%= link_to(l(:button_copy), {:action=>:index, :controller=>:copyproject, :project_id=>@project.id}, :class => 'icon icon-copy') %>
   <% end %>
-
   <% if User.current.allowed_to?(:add_subprojects, @project) %>
     <%= link_to l(:label_subproject_new), new_project_path(:parent_id => @project), :class => 'icon icon-add' %>
   <% end %>

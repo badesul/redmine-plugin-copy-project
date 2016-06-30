@@ -1,0 +1,4 @@
+pt-BR:
+   permission_copy_project: Copiar projeto
+   error_project_already_exists: "Identificador já existe"
+   notice_project_copied: "Cópia realizada com sucesso"
